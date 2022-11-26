@@ -1,0 +1,55 @@
+.majorContainer {
+  color: var(--cor9);
+  min-width: 49%;
+}
+
+.title {
+    margin-top: -2em;
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    display: flex;
+    background-color: var(--cor9);
+    width: 3.5em;
+    height: 3.5em;
+    border-radius: 50%;
+    justify-content: center;
+    margin-right: 1em;
+}
+
+.title svg {
+    font-size: 2em;
+    align-self: center;
+    color: var(--cor12);
+}
+
+.bothSides {
+  display: flex;
+  justify-content: space-between;
+}
+
+.leftSide {
+    font-size: 1.1em;
+}
+
+.expected {
+    font-size: 1em;
+    color: var(--cor8);
+}
+
+.rightSide {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: var(--cor8);
+}
+
+.green {
+    color: var(--cor10);
+}
+
+.red {
+    
+    color: var(--cor11);
+}

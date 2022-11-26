@@ -1,0 +1,15 @@
+
+.installments {
+    margin-top: -1em;
+    display: flex;
+    gap: 1em;
+    width: 50%;
+  }
+  
+  .break {
+    flex: 2;
+  }
+  
+  .qtde {
+    flex: 1;
+  }

@@ -1,0 +1,38 @@
+.header {
+    display: flex;
+    min-width: 71em;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1em;
+}
+
+.value {
+    margin-left: 2em;
+}
+
+.icons {
+    display: flex;
+    gap: 3em;
+    justify-self: flex-end;
+    margin-right: 2em;
+}
+
+.value h2 {
+    color: var(--cor9);
+}
+
+.value p {
+    color: var(--cor8);
+    font-size: .9em;
+}
+
+.icons svg {
+    font-size: 1.5em;
+    color: var(--cor8);
+}
+
+.icons svg:hover {
+    cursor: pointer;
+}

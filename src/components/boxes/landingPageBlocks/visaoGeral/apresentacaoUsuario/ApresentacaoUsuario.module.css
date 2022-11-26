@@ -1,0 +1,71 @@
+.container {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+/* Saudação */
+.saudacao {
+  flex: 1;
+  /* padding-left: 1em; */
+}
+
+.saudacao span {
+  color: var(--cor8);
+}
+
+.saudacao h3 {
+  color: var(--cor9);
+}
+
+/* Saldo Geral */
+
+.saldoBlock {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  padding-right: 1em;
+}
+
+.saldoGeral {
+  display: flex;
+  flex-direction: column;
+  padding-left: 2em;
+  border-left: 1px solid var(--cor12);
+}
+
+.saldoGeral > span {
+  color: var(--cor8);
+}
+
+.valor {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.valor > span {
+  font-size: 1em;
+}
+
+.cifrao {
+  font-size: 0.8em;
+  color: var(--cor8);
+}
+
+.valor > h2 {
+  color: black;
+}
+
+/* Toggle Saldo */
+
+.toggleSaldo {
+  color: var(--cor9);
+  font-size: 1.5em;
+  font-weight: bolder;
+  padding-top: 0.4em;
+}
+
+.toggleSaldo:hover {
+  cursor: pointer;
+}

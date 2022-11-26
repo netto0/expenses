@@ -1,0 +1,103 @@
+/* Container */
+.navbar {
+  display: flex;
+  background-color: var(--cor2);
+  border-bottom: 4px solid var(--cor3);
+  justify-content: space-between;
+  align-items: center;
+  height: 6em;
+  z-index: 2;
+}
+
+.navbar a {
+  font-size: 1.3rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.link {
+  color: var(--cor1);
+}
+
+.active {
+  color: var(--cor3);
+}
+
+/* Logo */
+
+.areaLogo {
+  flex: 1;
+  padding-left: 3rem;
+}
+
+.logo {
+  font-size: 3em;
+}
+
+.logo:hover {
+  color: var(--cor3);
+  transition: 0.3s;
+}
+
+/* Corpo */
+.corpo {
+  display: flex;
+  flex: 2;
+}
+
+.linkContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex: 1;
+}
+
+/* Login */
+
+.areaLogin {
+  display: flex;
+  flex: 1;
+  justify-content: right;
+  padding-right: 3.3rem;
+  /* border: 1px solid black; */
+}
+
+.botao {
+  border: none;
+  background-color: var(--cor2);
+  padding: 0.6em 1em;
+  font-size: 1.3em;
+  color: var(--cor4);
+  transition: 0.3s;
+}
+
+.botao:hover {
+  color: var(--cor3);
+  cursor: pointer;
+}
+
+.entrar {
+  font-weight: bold;
+}
+
+.userField {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.userField:hover {
+  cursor: pointer;
+}
+
+.userField span {
+  color: var(--cor4);
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.userField svg {
+  font-size: 3em;
+  color: var(--cor4);
+}

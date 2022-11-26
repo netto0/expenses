@@ -1,0 +1,38 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.banner {
+    flex:1;
+}
+
+.options {
+    display: flex;
+    align-items: center;
+}
+
+.options svg {
+    font-size: 1.5em;
+    color: var(--cor8);
+}
+
+.options svg:hover {
+    cursor: pointer;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    background-color: #fff;
+    padding: .5em 1em;
+    border-radius: 10px;
+}

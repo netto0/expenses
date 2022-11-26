@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-width: 71em;
+  width: 71em;
+  padding: 2em 0;
+  gap: 1em;
+}
+
+.dividedBody {
+  display: flex;
+  width: 100%;
+  gap: 1em;
+}
+
+.leftSide {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 45%;
+  
+}
+
+.rightSide {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 55%;
+  
+}

@@ -1,0 +1,32 @@
+.footer {
+    background-color: var(--cor2);
+    height: 6em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--cor4);
+
+}
+
+.medias {
+    display: flex;
+    gap: .3em;
+    margin-bottom: .2em;
+}
+
+.medias svg {
+    font-size: 2em;
+    margin: 5px;
+    transition: .3s;
+}
+
+.medias svg:hover {
+    color: var(--cor3);
+    cursor: pointer;
+}
+
+.copyRight span {
+    font-weight: bold;
+    color: var(--cor3);
+}

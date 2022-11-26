@@ -1,0 +1,89 @@
+.container {
+  display: flex;
+  align-items: center;
+  margin-bottom: .5em;
+}
+
+.cardId {
+  display: flex;
+  width: 100%;
+  margin-left: 1em
+}
+
+.cardName {
+  display: flex;
+  justify-content: space-between;
+}
+
+.available {
+    color: #000;
+}
+
+.invoice {
+    color: var(--cor11);
+}
+
+.btn {
+    border: none;
+    padding: .6em 1.3em;
+    border-radius: 5px;
+    background-color: var(--cor14);
+    color: var(--cor3);
+    font-weight: bold;
+}
+
+.subTitle {
+    font-size: 0.9em;
+    color: var(--cor8);
+}
+
+.valNumbers {
+    color: var(--cor8);
+    font-weight: bold;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.icon {
+  align-self: flex-start;
+
+}
+
+.icon svg {
+  font-size: 2.5em;
+  border-radius: 35%;
+  padding: 10px;
+  background-color: var(--cor8);
+  color: var(--cor12);
+  /* margin-right: 0.4em; */
+}
+
+.cardId > div > div > p {
+  font-weight: 600;
+}
+
+.cardId > div > span {
+  font-size: 0.9em;
+  color: var(--cor8);
+}
+
+.accBalance {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-right: 1em;
+  color: var(--cor8);
+}
+
+.information {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* gap: 1em; */
+}
+
+.values {
+  display: flex;
+  gap: 3em;
+}

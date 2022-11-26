@@ -1,0 +1,10 @@
+.closeButton {
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    color: var(--cor9);
+  }
+  
+  .closeButton:hover {
+    cursor: pointer;
+  }

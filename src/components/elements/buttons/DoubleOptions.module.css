@@ -1,0 +1,30 @@
+.doubleButton {
+  display: flex;
+  /* border: 1px solid var(--cor8); */
+  margin-bottom: 1em;
+  background-color: var(--cor12);
+}
+
+.option {
+  display: flex;
+  padding: 0.4em;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.option:hover{
+    cursor: pointer;
+}
+
+.activeRed {
+    background-color: var(--cor13);
+    color: var(--cor11);
+}
+
+.activeGreen {
+    background-color: var(--cor13);
+    color: var(--cor10);
+}

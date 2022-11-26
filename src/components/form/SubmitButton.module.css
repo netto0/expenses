@@ -1,0 +1,36 @@
+.btn {
+  color: var(--cor13);
+  border: none;
+  border-radius: 3px;
+  height: 2.5em;
+  width: 100%;
+  font-weight: bold;
+}
+
+.btn.red {
+  background-color: var(--cor11);
+  color: var(--cor16);
+}
+
+.btn.green {
+  background-color: var(--cor10);
+  color: var(--cor3);
+}
+
+.on {
+  background-color: var(--cor10);
+  color: var(--cor3);
+}
+
+.on:hover {
+  cursor: pointer;
+}
+
+.on:active {
+  background-color: var(--cor3);
+  color: var(--cor10);
+}
+
+.off {
+  background-color: var(--cor8);
+}

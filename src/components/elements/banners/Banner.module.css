@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  align-items: center;
+  /* border: 1px solid black; */
+  justify-content: space-between;
+}
+
+.bannerId {
+  display: flex;
+}
+
+.bannerIcon svg {
+  font-size: 2.5em;
+  border-radius: 35%;
+  padding: 10px;
+  background-color: var(--cor8);
+  color: var(--cor12);
+  font-weight: bolder;
+  margin-right: 0.4em;
+}
+
+.bannerTitle {
+  font-weight: 600;
+}
+
+.bannerSubTitle {
+  font-size: 0.9em;
+  color: var(--cor8);
+}
+
+.bannerValue {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-right: 1em;
+  color: var(--cor8);
+}
+
+.revenue {
+  color: var(--cor10);
+}
+
+.expense {
+  color: var(--cor11);
+}

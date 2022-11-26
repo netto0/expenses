@@ -1,0 +1,49 @@
+a {
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    width: 5.3em;
+    height: 6.5em;
+    align-items: center;
+    justify-content: center;
+    padding: .5em;
+    box-shadow: 0px 10px 15px -5px rgba(168, 168, 168, 0.5);
+    transition: .1s;
+}
+
+.container:active {
+    background-color: var(--cor15);
+    scale: .93;
+}
+
+.container:hover {
+    cursor: pointer;
+}
+
+.container div svg {
+    font-size: 3.5em;
+}
+
+.green {
+    color: var(--cor2);
+}
+.red {
+    color: var(--cor11);
+}
+.gray {
+    color: var(--cor9);
+}
+.darkGreen {
+    color: var(--cor3);
+}
+
+
+.container p {
+    padding: .3em;
+    text-transform: uppercase;
+    color: var(--cor8);
+}

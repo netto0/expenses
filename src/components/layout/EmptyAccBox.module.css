@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+    justify-content: center;
+    min-width: 49%;
+    height: 16.29em;
+    border: 3px solid var(--cor8);
+    border-radius: 10px;
+    border-style: dashed;
+    color: var(--cor8);
+}
+
+.container svg {
+    font-size: 4em;
+}
+
+.container svg:hover {
+    cursor: pointer;
+}

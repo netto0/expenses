@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 3;
+}
+
+.label {
+    color: var(--cor8);
+    font-size: 1em;
+    padding: .3em .2em;
+    text-indent: .1em;
+    font-weight: 500;
+}
+
+.input {
+    color: var(--cor9);
+    background-color: var(--cor0);
+    background-color: var(--cor12);
+    height: 30px;
+    width: 100%;
+    text-indent: .4em;
+    border: none;
+    border-radius: 3px;
+}
+
+.input::placeholder {
+    color: var(--cor15);
+    text-indent: .4em;
+}

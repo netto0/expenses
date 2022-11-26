@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-width: 71em;
+  width: 71em;
+  padding: 2em 0;
+  gap: 1em;
+}
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}

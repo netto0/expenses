@@ -1,0 +1,93 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.infoBlock {
+  display: flex;
+  padding: 0.5em 2em;
+  width: 11em;
+  height: 4em;
+  border-radius: 10px;
+  box-shadow: 0px 10px 15px 1px rgba(168, 168, 168, 0.5);
+  align-items: center;
+  justify-content: center;
+}
+
+
+.visaoGeral {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  width: 60%;
+}
+
+.blocks {
+  display: flex;
+  justify-content: space-around;
+  /* gap: 2em; */
+}
+
+.seeRelatorio {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+}
+
+.seeRelatorio:hover {
+  cursor: pointer;
+}
+
+.seeRelatorio svg {
+  font-size: 2.5em;
+}
+
+.seeRelatorio p {
+  padding-left: 1em;
+}
+
+.receitaBlock p {
+  color: var(--cor9);
+}
+
+.h3receita {
+  font-size: 1.3em;
+  color: var(--cor10);
+}
+
+.h3despesa {
+  font-size: 1.3em;
+  color: var(--cor11);
+}
+
+.visaoGeral div p {
+  color: var(--cor9);
+}
+
+.line {
+  background-color: var(--cor12);
+  width: 1px;
+  height: 10em;
+  margin: 0 2em;
+}
+
+.acessoRapido {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-left: 1px solid var(--cor12);
+  margin-left: 2em;
+  padding-left: 2em;
+  width: 40%;
+}
+
+.acessoRapido h4 {
+  font-size: 1.2em;
+  color: var(--cor9);
+}
+
+.botoes {
+  display: flex;
+  /* justify-content: space-around; */
+  gap: 1em;
+}

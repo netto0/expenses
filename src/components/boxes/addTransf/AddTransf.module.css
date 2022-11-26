@@ -1,0 +1,47 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: var(--cor0);
+  width: 30em;
+  left: 36.5%;
+  border-radius: 10px;
+  padding: 2em 1em;
+  gap: 1em;
+  box-shadow: var(--shadow1);
+  transition: .5s;
+  z-index: 6;
+}
+
+.container.active {
+  top: 100px;
+}
+
+.container.inactive {
+  top: -700px;
+}
+
+.title {
+  color: var(--cor9);
+}
+
+.double {
+  display: flex;
+  gap: 1em;
+}
+
+.select {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.dependent {
+  padding-bottom: 1em;
+}
