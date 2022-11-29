@@ -6,14 +6,12 @@ import Register from "../boxes/Register";
 import Message from "../elements/banners/Message";
 import Login from "../boxes/Login";
 
-function Initial({ show, setShow }) {
+function Initial() {
   const [message, setMessage] = useState();
 
   return (
     <div className={styles.initial}>
       {message && <Message type={message.type} msg={message.text} />}
-      {/* <Login show={show} /> */}
-      {/* <Register show={true} setShow={setShow} setMessage={setMessage}/> */}
       <div className={styles.content}>
         <h1>Expen$es</h1>
         <h3>Gestão de Finanças</h3>

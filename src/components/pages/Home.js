@@ -8,10 +8,16 @@ import ExibitionCard from "../layout/ExibitionCard";
 import CardBanner from "../elements/banners/CardBanner";
 import Banner from "../elements/banners/Banner";
 
-function Home({setShowEntry, setShowEntryExpense, toggleShowTransf}) {
+function Home({
+  hook
+}) {
   return (
     <div className={styles.container}>
-      <VisaoGeral receita="0,00" despesa="0,00" setShowEntry={setShowEntry} setShowEntryExpense={setShowEntryExpense} toggleShowTransf={toggleShowTransf}/>
+      <VisaoGeral
+        receita="0,00"
+        despesa="0,00"
+        hook={hook}
+      />
       <div className={styles.dividedBody}>
         <div className={styles.leftSide}>
           <ExibitionCard title="Minhas contas">
@@ -67,7 +73,6 @@ function Home({setShowEntry, setShowEntryExpense, toggleShowTransf}) {
               valueType="revenue"
             />
           </ExibitionCard>
-          {/* <AddEntry entryType="revenue"/> */}
         </div>
       </div>
     </div>

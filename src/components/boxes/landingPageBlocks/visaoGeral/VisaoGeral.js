@@ -11,9 +11,7 @@ import { Link } from "react-router-dom";
 function VisaoGeral({
   receita,
   despesa,
-  setShowEntry,
-  setShowEntryExpense,
-  toggleShowTransf,
+  hook,
 }) {
   return (
     <>
@@ -49,27 +47,25 @@ function VisaoGeral({
                 icon={<BiPlusCircle />}
                 title="receita"
                 color="green"
-                func={setShowEntry}
-                // func={setShowEntry(1,2)}
+                func={hook.displayRevenue}
               />
               <CardButton
                 icon={<BiMinusCircle />}
                 title="despesa"
                 color="red"
-                func={setShowEntryExpense}
+                func={hook.displayExpense}
               />
               <CardButton
                 icon={<BiTransferAlt />}
                 title="transf."
                 color="gray"
-                func={toggleShowTransf}
+                func={hook.displayTransf}
               />
               <Link to="/contas">
                 <CardButton
                   icon={<BsPiggyBank />}
                   title="contas"
                   color="darkGreen"
-                  // func={}
                 />
               </Link>
             </div>

@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useState } from "react";
+import useWindow from "./components/hooks/useWindow";
 
 import Navbar from "./components/layout/fixed/Navbar";
 import Container from "./components/layout/fixed/Container";
@@ -15,73 +15,37 @@ import AddEntry from "./components/boxes/addEntry/AddEntry";
 import AddTransf from "./components/boxes/addTransf/AddTransf";
 
 function App() {
-  const [showLogin, setShowLogin] = useState(false);
-  const [showReg, setShowReg] = useState(false);
-  const [showEntry, setShowEntry] = useState(false);
-  const [showTransf, setShowTransf] = useState(false);
-  const [showEntryExpense, setShowEntryExpense] = useState(false);
-  const [showBlur, setShowBlur] = useState(false);
-
-  function soma(valor1, valor2) {
-    console.log(`O resultado da soma é ${valor1 + valor2}`)
-  }
-
-  function toggleShowEntry() {
-    setShowBlur(!showBlur)
-    setShowEntry(!showEntry)
-  }
-  
-  function toggleShowTransf() {
-    setShowBlur(!showBlur)
-    setShowTransf(!showTransf)
-  }
-
-  function toggleShowEntryExpense() {
-    setShowBlur(!showBlur)
-    setShowEntryExpense(!showEntryExpense)
-  }
-
-  function toggleShowLogin() {
-    if (showReg) {
-      setShowReg(!showReg)
-      setShowLogin(!showLogin);
-      return
-    } else {
-      setShowLogin(!showLogin);
-    }
-    setShowBlur(!showBlur);
-  }
-
-  function toggleShowReg() {
-    if (showLogin) {
-      setShowLogin(!showLogin)
-      setShowReg(!showReg);
-      return
-    } else {
-      setShowReg(!showReg);
-    }
-    setShowBlur(!showBlur);
-  }
+  const hook = useWindow();
 
   return (
     <Router>
-      <Navbar
-        showLogin={showLogin}
-        setShowLogin={toggleShowLogin}
-        showReg={showReg}
-        setShowReg={toggleShowReg}
-        customClass="logged"
-      />
-      <Login show={showLogin} />
-      <Register show={showReg} />
-      {/* <AddEntry expense={true} show={showEntryExpense} setShowEntry={toggleShowEntryExpense}/> */}
-      <AddEntry expense={true} show={showEntryExpense} setShowEntry={toggleShowEntryExpense}/>
-      <AddEntry expense={false} show={showEntry} setShowEntry={toggleShowEntry}/>
-      <AddTransf show={showTransf} toggleShowTransf={toggleShowTransf}/>
-      <Container blur={showBlur}>
+      <Navbar hook={hook} customClass="logge" />
+      {hook.loginVisivel && <Login show={hook.loginVisivel} />}
+      {hook.registerVisivel && <Register show={hook.registerVisivel} />}
+      {hook.revenueVisivel && (
+        <AddEntry
+          expense={false}
+          show={hook.revenueVisivel}
+          setShowEntry={hook.displayRevenue}
+        />
+      )}
+      {hook.expenseVisivel && (
+        <AddEntry
+          expense={true}
+          show={hook.expenseVisivel}
+          setShowEntry={hook.displayExpense}
+        />
+      )}
+      {hook.transfVisivel && (
+        <AddTransf
+          show={hook.transfVisivel}
+          toggleShowTransf={hook.displayTransf}
+        />
+      )}
+      <Container blur={hook.blurVisivel}>
         <Routes>
-          <Route exact path="/" element={<Initial show={showLogin} />} />
-          <Route path="/home" element={<Home setShowEntry={toggleShowEntry} setShowEntryExpense={toggleShowEntryExpense} toggleShowTransf={toggleShowTransf}/>} />
+          <Route exact path="/" element={<Initial />} />
+          <Route path="/home" element={<Home hook={hook} />} />
           <Route path="/contas" element={<Contas />} />
           <Route path="/receitas" element={<Receitas />} />
           <Route path="/despesas" element={<Despesas />} />

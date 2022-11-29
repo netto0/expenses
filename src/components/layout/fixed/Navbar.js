@@ -4,7 +4,7 @@ import { FaUserAlt } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import styles from "./Navbar.module.css";
 
-function Navbar({ setShowLogin, customClass, setShowReg }) {
+function Navbar({ customClass, hook }) {
   return (
     <div className={`${styles.navbar} ${customClass}`}>
       <div className={styles.corpo}>
@@ -67,12 +67,12 @@ function Navbar({ setShowLogin, customClass, setShowReg }) {
           </div>
         ) : (
           <>
-            <button className={styles.botao} onClick={setShowReg}>
+            <button className={styles.botao} onClick={hook.displayRegister}>
               Registrar
             </button>
             <button
               className={`${styles.botao} ${styles.entrar}`}
-              onClick={setShowLogin}
+              onClick={hook.displayLogin}
             >
               Entrar
             </button>
