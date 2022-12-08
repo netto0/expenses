@@ -9,12 +9,13 @@ import EntryOption from "../../elements/buttons/EntryOption";
 import SubmitButton from "../../form/SubmitButton";
 import CloseButton from "../../elements/buttons/CloseButton";
 
-function AddTransf({ show, toggleShowTransf }) {
+function AddTransf({ show, toggleShowTransf, id }) {
   return (
     <div
       className={`${styles.container} ${
         show ? styles.active : styles.inactive
       }`}
+      id={id}
     >
       <CloseButton func={toggleShowTransf} />
       <h2 className={styles.title}>Transferência entre contas</h2>

@@ -12,6 +12,7 @@ function ListItem({ icon, entryTitle, entryDate, entryValue, entryType }) {
           subTitle={entryDate}
           value={entryValue}
           valueType={entryType}
+          visibleBalance={true}
         />
       </div>
       <div className={styles.options}>

@@ -18,7 +18,7 @@ function VisaoGeral({
       <RoundedBox>
         <div className={styles.container}>
           <div className={styles.visaoGeral}>
-            <ApresentacaoUsuario userName="Netto" userSaldo="0,00" />
+            <ApresentacaoUsuario userName="Netto" userSaldo="0,00" hook={hook} />
             <div className={styles.blocks}>
               <div className={styles.infoBlock}>
                 <div>

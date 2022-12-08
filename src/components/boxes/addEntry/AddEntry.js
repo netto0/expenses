@@ -12,16 +12,14 @@ import Installments from "./Installments";
 import SubmitButton from "../../form/SubmitButton";
 import CloseButton from "../../elements/buttons/CloseButton";
 
-function AddEntry({ setShowEntry, show, expense }) {
-
+function AddEntry({ setShowEntry, show, expense}) {
   return (
-    // <div className={`${styles.container} ${styles.inactive}`}>
     <div
       className={`${styles.container} ${
         show ? styles.active : styles.inactive
       }`}
     >
-      <h2 className={styles.title}>Nova {expense ? 'despesa' : 'receita'}</h2>
+      <h2 className={styles.title}>Nova {expense ? "despesa" : "receita"}</h2>
       <CloseButton func={setShowEntry} />
 
       <form>
@@ -53,7 +51,11 @@ function AddEntry({ setShowEntry, show, expense }) {
           {/* Essa div só irá aparecer caso o repeat esteja marcado */}
           <div className={styles.dependent}>
             <div className={styles.installments}>
-              <DoubleOptions opt1="Parcelada" opt2="Fixa Mensal" highlightColor={expense ? 'activeRed' : 'activeGreen'}/>
+              <DoubleOptions
+                opt1="Parcelada"
+                opt2="Fixa Mensal"
+                highlightColor={expense ? "activeRed" : "activeGreen"}
+              />
               <Installments />
             </div>
             <div className={styles.installments}>
@@ -67,7 +69,7 @@ function AddEntry({ setShowEntry, show, expense }) {
           </div>
         </div>
         <div className={styles.submit}>
-          <SubmitButton text="Enviar" customClass={expense ? 'red' : 'green'} />
+          <SubmitButton text="Enviar" customClass={expense ? "red" : "green"} />
         </div>
       </form>
     </div>

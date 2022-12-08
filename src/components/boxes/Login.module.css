@@ -10,7 +10,7 @@
   border-radius: 5px;
   background-color: var(--cor0);
   box-shadow: var(--shadow1);
-  transition: 0.5s;
+  transition: 0.3s;
   z-index: 5;
 }
 
@@ -19,7 +19,7 @@
 }
 
 .container.inactive {
-  top: -500px;
+  top: -400px;
 }
 
 #title {

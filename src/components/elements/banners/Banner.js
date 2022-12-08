@@ -1,19 +1,18 @@
 import styles from "./Banner.module.css";
 
-// function AccBanner({id}) {
-function Banner(props) {
+function Banner({ icon, title, subTitle, valueType, value, visibleBalance }) {
   return (
     <div className={styles.container}>
       <div className={styles.bannerId}>
-        <div className={styles.bannerIcon}>{props.icon}</div>
+        <div className={styles.bannerIcon}>{icon}</div>
         <div>
-          <p className={styles.bannerTitle}>{props.title}</p>
-          <span className={styles.bannerSubTitle}>{props.subTitle}</span>
+          <p className={styles.bannerTitle}>{title}</p>
+          <span className={styles.bannerSubTitle}>{subTitle}</span>
         </div>
       </div>
       <div className={styles.bannerValue}>
-        <p className={`${styles[props.valueType]}`}>
-          R$ <span>{props.value}</span>
+        <p className={`${styles[valueType]}`}>
+          R$ {visibleBalance ? <span>{value}</span> : <span>--,--</span>}
         </p>
       </div>
     </div>

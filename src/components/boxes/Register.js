@@ -4,7 +4,7 @@ import { useState } from "react";
 import Input from "../form/Input";
 import SubmitButton from "../form/SubmitButton";
 
-function Register({ show, setMessage }) {
+function Register({ show, setMessage, id }) {
   const [user, setUser] = useState({});
   const [clicavel, setClicavel] = useState(false);
 
@@ -86,6 +86,7 @@ function Register({ show, setMessage }) {
         className={`${styles.container} ${
           show ? styles.active : styles.inactive
         }`}
+        id={id}
       >
         <form className={styles.form} onSubmit={submit}>
           <h3 id={styles.title}>Registar</h3>

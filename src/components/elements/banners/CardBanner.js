@@ -2,7 +2,7 @@ import styles from "./CardBanner.module.css";
 import { BsCreditCard } from "react-icons/bs";
 
 // function AccBanner({id}) {
-function CardBanner() {
+function CardBanner({visibleBalance}) {
   const id = {
     name: "NuBank",
     available: "6000,00",
@@ -23,13 +23,18 @@ function CardBanner() {
             <div>
               <span className={styles.subTitle}>Disponível</span>
               <p className={styles.valNumbers}>
-                R$ <span className={styles.available}>{id.available}</span>
+                R${" "}
+                <span className={styles.available}>
+                  {visibleBalance ? id.available : "--,--"}
+                </span>
               </p>
             </div>
             <div>
               <span className={styles.subTitle}>Fatura atual</span>
               <p className={styles.valNumbers}>
-                <span className={styles.invoice}>R$ {id.invoice}</span>
+                <span className={styles.invoice}>
+                  R$ {visibleBalance ? id.invoice : "--,--"}
+                </span>
               </p>
             </div>
           </div>

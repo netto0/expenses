@@ -1,12 +1,11 @@
 import styles from "./Login.module.css";
-import { useState } from "react";
 import Input from "../form/Input";
 import SubmitButton from "../form/SubmitButton";
 
 function Login({ show }) {
   function submit(e) {
     e.preventDefault();
-    console.log("Login");
+    console.log("Ação Login");
   }
 
   return (

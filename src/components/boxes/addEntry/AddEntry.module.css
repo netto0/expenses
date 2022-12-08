@@ -9,8 +9,8 @@
   padding: 2em 1em;
   gap: 1em;
   box-shadow: var(--shadow1);
-  transition: .5s;
-  z-index: 6;
+  transition: 0.3s;
+  z-index: 5;
 }
 
 .container.active {

@@ -6,7 +6,7 @@
 }
 
 html, body, #root {
-  background-color: #c6d0d9;
+  background-color: var(--cor1);
   height: 100%;
 }
 
