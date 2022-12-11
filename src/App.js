@@ -22,7 +22,7 @@ function App() {
           hook.blurVisivel && styles.active
         }`}
       />
-      <AnimatedRoutes hook={hook}/>
+      <AnimatedRoutes hook={hook} className={styles.animatedRoutes}/>
 
       <Footer />
       <div id="modals">
