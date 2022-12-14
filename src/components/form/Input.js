@@ -9,7 +9,7 @@ function Input({
   placeholder,
   handleOnChange,
   value,
-  warning = false,
+  warning,
 }) {
   return (
     <div className={styles.container}>
@@ -24,7 +24,7 @@ function Input({
         value={value}
         rows={rows}
       ></input>
-      {warning && <Warning text={`${label} inválido `} />}
+      {warning && <Warning text={warning} />}
     </div>
   );
 }

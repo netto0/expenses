@@ -6,7 +6,7 @@ import styles from "./Navbar.module.css";
 
 function Navbar({ customClass, hook }) {
   return (
-    <div className={`${styles.navbar} ${customClass}`}>
+    <div className={`${styles.navbar} ${customClass ? "logged" : ""}`}>
       <div className={styles.corpo}>
         <div className={styles.areaLogo}>
           <NavLink
@@ -19,7 +19,7 @@ function Navbar({ customClass, hook }) {
             <BiDollarCircle className={styles.logo} />
           </NavLink>
         </div>
-        {customClass == "logged" && (
+        {customClass && (
           <div className={styles.linkContainer}>
             <NavLink
               to="/home"
@@ -60,7 +60,7 @@ function Navbar({ customClass, hook }) {
         )}
       </div>
       <div className={styles.areaLogin}>
-        {customClass == "logged" ? (
+        {customClass ? (
           <div className={styles.userField}>
             <FaUserAlt />
             <span>Usuário</span>

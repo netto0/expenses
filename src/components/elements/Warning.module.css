@@ -1,5 +1,5 @@
 .msg {
-    color: rgb(253, 86, 86);
-    font-size: .7em;
+    color: var(--cor11);
+    font-size: .8em;
     text-indent: 3px;
 }

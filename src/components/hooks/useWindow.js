@@ -3,6 +3,8 @@ import { useState } from "react";
 export default function useWindow() {
   const [visible, setVisible] = useState(false);
   const [visibleBalance, setVisibleBalance] = useState(true)
+  const [typeMsg, setTypeMsg] = useState()
+  const [msg, setMsg] = useState()
 
   return {
     loginVisivel: visible == "login",
@@ -11,8 +13,11 @@ export default function useWindow() {
     expenseVisivel: visible == "expense",
     transfVisivel: visible == "transf",
     blurVisivel: visible != false,
-    
+    typeMsg,
+    msg,
     visibleBalance,
+    setMsg,
+    setTypeMsg,
 
     displayLogin: () => {
       visible != "login" ? setVisible("login") : setVisible(false);

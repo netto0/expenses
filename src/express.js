@@ -1,48 +1,29 @@
-const express = require("express")
-// Fake database
-let users = []
-// Criar o app
-const app = express()
+const express = require("express");
+const app = express();
+const mysql = require("mysql");
+const cors = require("cors");
 
-// Aplicar Middlewares
-app.use(express.json())
+const db = mysql.createPool({
+  host: "localhost",
+  user: "root",
+  password: "",
+  database: "expensesdb",
+});
 
-app.post('/users', (req, res) => {
-    const {id, name, email, password} = req.body
-    const user = {id, name, email, password}
-    users.push(user)
-    return res.status(201).json(user)
-})
+app.use(cors())
+app.use(express.json());
+app.listen(3001, () => console.log("Servidor Rodando"));
 
-app.get('/users', (req, res) => {
-    const allUsers = users
-    return res.status(200).json(allUsers)
-})
+app.post("/register", (req, res) => {
+  const { first_name } = req.body;
+  const { scnd_name } = req.body;
+  const { email } = req.body;
+  const { password } = req.body;
 
-app.get('/users/:user_id', (req, res) => {
-    const {user_id } = req.params
-    const user = users.find((user) => user.id === user_id)
-    if (!user) res.status(404).json("not found")
-    return res.status(200).json(user)
-})
+  let SQL =
+    "INSERT INTO users (first_name, scnd_name, email, password) VALUES (?, ?, ?, ?)";
+  db.query(SQL, [first_name, scnd_name, email, password], (err, result) => {
+    console.log(err);
+  });
+});
 
-app.delete('/users/:user_id', (req, res) => {
-    const {user_id} = req.params
-    const filteredUsers = users.filter(user => user.id !== user_id)
-    users = filteredUsers
-    return res.status(204).json(filteredUsers)
-})
-
-app.patch('/users/:user_id', (req,res) => {
-    const {name, email, password} = req.body
-    const {user_id} = req.params
-    const user = users.find(user => user.id === user_id)
-    user.id = user.id
-    user.name = name ? name : user.name
-    user.email = email ? email : user.email
-    user.password = password ? password : user.password
-    return res.status(200).json(user)
-})
-
-// Rodar o servidor
-app.listen(3333, () => console.log("Server is Running"))

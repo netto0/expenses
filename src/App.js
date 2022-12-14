@@ -1,5 +1,6 @@
 // import { BrowserRouter as Router } from "react-router-dom";
 import { BrowserRouter as Router } from "react-router-dom";
+
 import styles from "./App.module.css";
 
 import useWindow from "./components/hooks/useWindow";
@@ -10,13 +11,20 @@ import Login from "./components/boxes/Login";
 import Register from "./components/boxes/Register";
 import AddEntry from "./components/boxes/addEntry/AddEntry";
 import AddTransf from "./components/boxes/addTransf/AddTransf";
+import { Axios } from "axios";
+import { useState } from "react";
+import Message from "./components/elements/banners/Message";
+
 
 function App() {
   const hook = useWindow();
+  const [logged, setLogged] = useState(true)
 
   return (
     <Router>
-      <Navbar hook={hook} customClass="logged" />
+      <Navbar hook={hook} customClass={logged} />
+      {/* <Message type="error" msg="Mensagem de teste"/> */}
+      <Message type={hook.typeMsg} msg={hook.msg}/>
       <div
         className={`${styles.contentBlock} ${
           hook.blurVisivel && styles.active
@@ -27,7 +35,7 @@ function App() {
       <Footer />
       <div id="modals">
         <Login show={hook.loginVisivel} />
-        <Register show={hook.registerVisivel} />
+        <Register show={hook.registerVisivel} setShow={hook.displayRegister} logged={logged} setLogged={setLogged} hook={hook}/>
         <AddEntry
           expense={false}
           show={hook.revenueVisivel}
